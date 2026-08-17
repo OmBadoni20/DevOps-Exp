@@ -15,6 +15,12 @@ pipeline {
             }
         }
 
+        stage('Test') {
+            steps {
+                bat 'if exist Main.class (echo Test Passed: Main.class created successfully) else (echo Test Failed & exit /b 1)'
+            }
+        }
+
         stage('Run') {
             steps {
                 bat 'java Main'
