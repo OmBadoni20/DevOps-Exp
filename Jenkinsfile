@@ -26,5 +26,11 @@ pipeline {
                 bat 'java Main'
             }
         }
+
+        stage('Deploy') {
+            steps {
+                bat 'echo Deployment successful!'
+            }
+        }
     }
 }
